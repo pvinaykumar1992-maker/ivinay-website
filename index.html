@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vinay Kumar Polamarasetty — enterprise AI, decision intelligence, research, writing, and speaking.">
+  <meta name="author" content="Vinay Kumar Polamarasetty">
+  <meta property="og:title" content="Vinay Kumar Polamarasetty | Enterprise AI">
+  <meta property="og:description" content="Research, writing, and practical work at the intersection of enterprise AI, decision intelligence, and management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ivinay.com">
+  <title>Vinay Kumar Polamarasetty | Enterprise AI</title>
+
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --text: #101828;
+      --muted: #5f6b7a;
+      --line: #e3e7ee;
+      --accent: #2356d8;
+      --accent-soft: #edf3ff;
+      --max: 1080px;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    .wrap {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid var(--line);
+      background: rgba(246, 247, 249, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 56px;
+      align-items: center;
+      padding: 96px 0 76px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      margin-bottom: 20px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 24px;
+      font-size: clamp(2.8rem, 6.4vw, 5.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 1.18rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--surface);
+      font-weight: 750;
+    }
+
+    .button.primary {
+      border-color: var(--text);
+      background: var(--text);
+      color: #fff;
+    }
+
+    .monogram {
+      width: 100%;
+      max-width: 285px;
+      aspect-ratio: 1;
+      justify-self: end;
+      display: grid;
+      place-items: center;
+      border: 1px solid #d8deea;
+      border-radius: 34px;
+      background: linear-gradient(145deg, #dce7ff, #f7f9fd);
+      box-shadow: 0 22px 60px rgba(16, 24, 40, 0.10);
+    }
+
+    .monogram span {
+      color: var(--accent);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 850;
+      letter-spacing: -0.09em;
+    }
+
+    section { padding: 34px 0 76px; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: -0.04em;
+    }
+
+    .section-head p {
+      max-width: 570px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      padding: 26px;
+      box-shadow: 0 8px 28px rgba(16, 24, 40, 0.04);
+    }
+
+    .about {
+      color: #313b4c;
+      font-size: 1.08rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .item h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .item p {
+      margin: 0 0 17px;
+      color: var(--muted);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 17px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: #f2f4f7;
+      color: #4e5968;
+      font-size: 0.77rem;
+      font-weight: 750;
+    }
+
+    .text-link {
+      color: var(--accent);
+      font-weight: 750;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 18px;
+    }
+
+    .feature .card { min-height: 100%; }
+
+    .feature-title {
+      margin: 0 0 11px;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      letter-spacing: -0.035em;
+    }
+
+    .quote {
+      margin: 0 0 18px;
+      font-size: 1.42rem;
+      line-height: 1.38;
+      letter-spacing: -0.035em;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 52px 28px;
+    }
+
+    .contact h2 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      letter-spacing: -0.045em;
+    }
+
+    .contact p {
+      max-width: 660px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 34px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 66px;
+      }
+
+      .monogram {
+        width: 175px;
+        justify-self: start;
+        border-radius: 24px;
+      }
+
+      .grid, .feature { grid-template-columns: 1fr; }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="wrap" aria-label="Primary navigation">
+      <a class="brand" href="#top">ivinay.com</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#book">Book</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Enterprise AI · Decision Intelligence · Management</span>
+        <h1>Turning enterprise AI ambition into measurable value.</h1>
+        <p class="hero-copy">
+          I work at the intersection of enterprise technology, artificial intelligence, and decision systems—connecting business needs, technology execution, adoption, and measurable outcomes.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#research">Explore my work</a>
+          <a class="button" href="mailto:pvinaykumar1992@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="monogram" aria-label="Vinay Kumar Polamarasetty">
+        <span>VK</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>A practitioner-led perspective on how organizations adopt, measure, and scale technology.</p>
+        </div>
+
+        <div class="card about">
+          Vinay Kumar Polamarasetty works across enterprise software, artificial intelligence, and decision systems. His work has contributed to large-scale initiatives spanning ERP, CRM, CPQ, analytics, and AI-enabled solutions across heavy-equipment dealerships in construction, agriculture, and mining. His focus is on translating complex business needs into systems, processes, and technology solutions that improve operational effectiveness at scale. Alongside his industry work, he researches how organizations can evaluate AI adoption, decision quality, and enterprise value.
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Research</h2>
+          <p>Frameworks for measuring enterprise AI adoption, project decisions, and business value.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card item">
+            <div class="meta">
+              <span class="tag">SSRN</span>
+              <span class="tag">Decision Intelligence</span>
+            </div>
+            <h3>A Decision-Based Metric Framework for AI-Driven Projects</h3>
+            <p>
+              Introduces the Decision Impact Score and Project Success Score to evaluate AI-driven projects through sequential decisions, failure propagation, and project-level outcomes.
+            </p>
+            <a class="text-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6300858" target="_blank" rel="noopener noreferrer">Read on SSRN →</a>
+          </article>
+
+          <article class="card item">
+            <div class="meta">
+              <span class="tag">SSRN</span>
+              <span class="tag">Enterprise AI Adoption</span>
+            </div>
+            <h3>AI Adoption as an Experimental System: A Framework for Measuring Enterprise AI Value</h3>
+            <p>
+              Examines enterprise AI adoption as an iterative system and introduces a framework built around adoption, implementation, and change readiness.
+            </p>
+            <a class="text-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6608478" target="_blank" rel="noopener noreferrer">Read on SSRN →</a>
+          </article>
+
+          <article class="card item">
+            <div class="meta">
+              <span class="tag">Current Research</span>
+              <span class="tag">EAVOF</span>
+            </div>
+            <h3>Measuring Enterprise AI Value: A Closed-Loop Framework for Adoption, Decision Intelligence, and ROI Optimization</h3>
+            <p>
+              EAVOF, the Enterprise AI Value Optimization Framework, connects adoption readiness, decision intelligence, and ROI optimization in a closed-loop model for enterprise AI.
+            </p>
+          </article>
+
+          <article class="card item">
+            <div class="meta">
+              <span class="tag">Research Question</span>
+            </div>
+            <h3>What I am trying to solve</h3>
+            <p>
+              How can organizations move beyond isolated AI experimentation and measure whether their AI initiatives are creating durable operational and business value?
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Book</h2>
+          <p>A practical reflection on how management is evolving through the AI lens.</p>
+        </div>
+
+        <div class="feature">
+          <div class="card">
+            <div class="meta">
+              <span class="tag">Published May 21, 2026</span>
+              <span class="tag">Amazon Kindle</span>
+            </div>
+            <h3 class="feature-title">The Management Shift: Through the AI Lens</h3>
+            <p style="color: var(--muted);">
+              The book brings together practical observations on how project and product management are evolving in the age of AI, while keeping the focus on decision making, execution, and the human side of management.
+            </p>
+            <a class="button primary" href="https://www.amazon.com/dp/B0H2GJ72YZ" target="_blank" rel="noopener noreferrer">View on Amazon</a>
+          </div>
+
+          <div class="card">
+            <p class="quote">Management is not disappearing in the age of AI. It is becoming more intentional.</p>
+            <p style="margin: 0; color: var(--muted);">
+              A concise book for practitioners navigating the changing relationship between people, decisions, systems, and intelligent tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speaking">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Speaking</h2>
+          <p>Sharing applied research on enterprise AI, decision systems, and management.</p>
+        </div>
+
+        <article class="card item">
+          <div class="meta">
+            <span class="tag">Accepted Contributed Presentation</span>
+            <span class="tag">INFORMS Annual Meeting 2026</span>
+            <span class="tag">November 1–4, 2026</span>
+            <span class="tag">San Francisco, California</span>
+          </div>
+          <h3>A Sequential Decision-Based Metric Framework for AI-Driven Projects</h3>
+          <p>
+            Accepted for presentation at the INFORMS Annual Meeting 2026. The talk focuses on evaluating AI-driven projects through sequential decisions, Decision Impact Score, Project Success Score, and failure propagation.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="card contact">
+          <h2>Let’s connect.</h2>
+          <p>
+            I am open to thoughtful conversations around enterprise AI, research, podcast discussions, speaking opportunities, and reviewing or judging relevant work.
+          </p>
+          <div class="actions" style="justify-content: center;">
+            <a class="button primary" href="mailto:pvinaykumar1992@gmail.com">Email me</a>
+            <a class="button" href="https://www.amazon.com/dp/B0H2GJ72YZ" target="_blank" rel="noopener noreferrer">Book</a>
+            <a class="button" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6300858" target="_blank" rel="noopener noreferrer">Paper 1</a>
+            <a class="button" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6608478" target="_blank" rel="noopener noreferrer">Paper 2</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Vinay Kumar Polamarasetty · ivinay.com</div>
+  </footer>
+</body>
+</html>

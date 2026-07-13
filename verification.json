@@ -1,0 +1,22 @@
+{
+  "verification_pass_1": {
+    "title_present": true,
+    "all_required_sections": true,
+    "paper_1_link": true,
+    "paper_2_link": true,
+    "amazon_link": true,
+    "informs_title": true,
+    "informs_dates": true,
+    "eavof_title": true,
+    "email_present": true
+  },
+  "verification_pass_2": {
+    "no_placeholder_links": true,
+    "all_external_links_https_or_mailto": true,
+    "single_h1": true,
+    "html_lang_en": true,
+    "viewport_present": true,
+    "description_present": true
+  },
+  "all_checks_passed": true
+}
